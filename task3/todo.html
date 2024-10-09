@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced To-Do List Web App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do WebApp</h1>
+        <div class="input-section">
+            <input type="text" id="task-title" placeholder="Title" required>
+            <textarea id="task-desc" placeholder="Description" required></textarea>
+            <button onclick="addTask()">Add</button>
+            
+        </div>
+        <div class="task-section">
+            <h2>Pending Tasks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date Added</th>
+                        <th>Complete</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="pending-task-list"></tbody>
+            </table>
+        </div>
+        <div class="task-section">
+            <h2>Completed Tasks</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Date Completed</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="completed-task-list"></tbody>
+            </table>
+        </div>
+        <button onclick="saveTasks()">Save</button> 
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
